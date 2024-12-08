@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    padding: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #e2f7d6;
+}
+caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+  /* Custom alignments */
+th:nth-child(1), td:nth-child(1) {
+    text-align: left; /* Project name */
+}
+th:nth-child(2), td:nth-child(2) {
+    text-align: center; /* Version */
+}
+th:nth-child(3), td:nth-child(3) {
+    text-align: left; /* Description */
+}
+th:nth-child(4), td:nth-child(4) {
+    text-align: left; /* Language */
+}
+th:nth-child(5), td:nth-child(5) {
+    text-align: center; /* Public */
+}
+th:nth-child(6), td:nth-child(6) {
+    text-align: center; /* Level */
+}
+th:nth-child(7), td:nth-child(7) {
+    text-align: left; /* Interface */
+}
+th:nth-child(8), td:nth-child(8) {
+    text-align: left; /* Type */
+}
