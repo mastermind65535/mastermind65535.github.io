@@ -83,32 +83,69 @@ function ShowLevel() {
 }
 
 function LoadChart() {
-    const ctx = document.getElementById('confidenceChart').getContext('2d');
-    const confidenceChart = new Chart(ctx, {
-        type: 'bar',  // Chart type: 'line' for line graph
+    const ctx = document.getElementById('skillChart').getContext('2d');
+    const skillChart = new Chart(ctx, {
+        type: 'radar',  // Radar chart type
         data: {
-            labels: ['Python', 'C#', 'C++', 'C', 'PHP', 'JavaScript'], // X-axis labels
+            labels: [
+                'Network Hacking',
+                'Malware Development & Analysis',
+                'OSINT - Open Source Intelligence',
+                'Security Tool Development',
+                'System Hacking & Exploit Development',
+                'Intrusion Detection & Defense',
+                'Practical Experience & Community Involvement'
+            ], // Labels for each axis in the radar chart
             datasets: [{
-                label: 'Programming Language Confidence',  // Label for the dataset
-                data: [100, 90, 50, 10, 50, 60, 40], // Y-axis values
-                fill: false,  // Whether to fill the area under the line
-                backgroundColor: [         // Custom bar colors
-                    'black',   // First bar (red)
-                    'black',   // Second bar (blue)
-                    'black',   // Third bar (yellow)
-                    'black',   // Fourth bar (greenish)
-                    'black',  // Fifth bar (purple)
-                    'black'    // Sixth bar (orange)
-                ],
-                borderColor: 'black', // Line color
-                tension: 0.1  // Line smoothness
+                label: 'Skills',  // Dataset label
+                data: [90, 85, 70, 95, 65, 75, 50], // Data points
+                fill: true,
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgb(255, 99, 132)',
+                pointBackgroundColor: 'rgb(255, 99, 132)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(255, 99, 132)'
             }]
         },
         options: {
-            responsive: false,  // Makes the chart responsive to window size
+            responsive: true,  // Chart responsiveness
             scales: {
                 y: {
                     beginAtZero: true  // Start the y-axis at zero
+                },
+                r: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const ctx2 = document.getElementById('growthChart').getContext('2d');
+    const growthChart = new Chart(ctx2, {
+        type: 'line',  // Radar chart type
+        data: {
+            labels: ['2024'], // Labels for each axis in the radar chart
+            datasets: [{
+                labels: ['2024'],  // Dataset label
+                data: [90, 85, 70, 95, 65, 75, 50], // Data points
+                fill: true,
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgb(255, 99, 132)',
+                pointBackgroundColor: 'rgb(255, 99, 132)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(255, 99, 132)'
+            }]
+        },
+        options: {
+            responsive: true,  // Chart responsiveness
+            scales: {
+                y: {
+                    beginAtZero: true  // Start the y-axis at zero
+                },
+                r: {
+                    beginAtZero: true
                 }
             }
         }

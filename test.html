@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Timeline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .timeline {
+            position: relative;
+            margin: 20px auto;
+            padding: 20px 0;
+            width: 90%;
+            max-width: 600px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: #ccc;
+        }
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+        }
+        .timeline-item:nth-child(odd) {
+            text-align: left;
+        }
+        .timeline-item:nth-child(even) {
+            text-align: right;
+        }
+        .timeline-item-content {
+            display: inline-block;
+            position: relative;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f5f5f5;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .timeline-item-content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #007bff;
+            z-index: 1;
+        }
+        .timeline-item:nth-child(even) .timeline-item-content {
+            margin-left: 20px;
+        }
+        .timeline-item:nth-child(even) .timeline-item-content::before {
+            left: -15px;
+        }
+        .timeline-item:nth-child(odd) .timeline-item-content {
+            margin-right: 20px;
+        }
+        .timeline-item:nth-child(odd) .timeline-item-content::before {
+            right: -15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-item-content">
+                <h3>Event 1</h3>
+                <p>Description for the first event.</p>
+                <span>2024-01-01</span>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-item-content">
+                <h3>Event 2</h3>
+                <p>Description for the second event.</p>
+                <span>2024-02-15</span>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-item-content">
+                <h3>Event 3</h3>
+                <p>Description for the third event.</p>
+                <span>2024-03-10</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
