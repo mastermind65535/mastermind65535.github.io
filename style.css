@@ -72,7 +72,7 @@ body {
 }
 .project-info img {
     width: 100px;
-    height: 100px;
+    height: auto;
     margin-right: 20px;
 }
 .project-info .project-name {
@@ -81,6 +81,11 @@ body {
 }
 .project-info .project-version {
     font-size: 1.1em;
+    color: #666;
+}
+
+.project-info .project-date {
+    font-size: 0.8em;
     color: #666;
 }
 .project-details {
@@ -104,3 +109,31 @@ body {
     object-fit: cover;
     border: 1px solid #ddd;
 }
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+/* .excellent {
+    color: green;
+}
+
+.advanced {
+    color: blue;
+}
+
+.intermediate {
+    color: #FF8C00;
+}
+
+.basic {
+    color: black;
+}
+
+.experimental {
+    color: gray;
+} */
