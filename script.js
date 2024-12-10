@@ -7,6 +7,10 @@ function toggleDetails(detailsId) {
     }
 }
 
+function redirectTo(event) {
+    window.location.href = event.getAttribute("url");
+}
+
 function addBadgeImages() {
     let BADGES = {}
     BADGES["Python"] = "https://camo.githubusercontent.com/0d0779a129f1dcf6c31613b701fe0646fd4e4d2ed2a7cbd61b27fd5514baa938/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f707974686f6e2d3336373041303f7374796c653d666f722d7468652d6261646765266c6f676f3d707974686f6e266c6f676f436f6c6f723d666664643534";
@@ -123,29 +127,45 @@ function LoadChart() {
 
     const ctx2 = document.getElementById('growthChart').getContext('2d');
     const growthChart = new Chart(ctx2, {
-        type: 'line',  // Radar chart type
+        type: 'line',
         data: {
-            labels: ['2024'], // Labels for each axis in the radar chart
+            labels: ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
             datasets: [{
-                labels: ['2024'],  // Dataset label
-                data: [90, 85, 70, 95, 65, 75, 50], // Data points
-                fill: true,
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgb(255, 99, 132)',
-                pointBackgroundColor: 'rgb(255, 99, 132)',
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgb(255, 99, 132)'
+                label: 'Cumulative Projects',
+                data: [0, 0, 0, 0, 0, 0, 1, 1+37, 37+41],
+                backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                borderColor: 'rgb(54, 162, 235)',
+                borderWidth: 1
             }]
         },
         options: {
-            responsive: true,  // Chart responsiveness
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top',
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return `Projects: ${tooltipItem.raw}`;
+                        }
+                    }
+                }
+            },
             scales: {
                 y: {
-                    beginAtZero: true  // Start the y-axis at zero
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Number of Projects'
+                    }
                 },
-                r: {
-                    beginAtZero: true
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Year'
+                    }
                 }
             }
         }

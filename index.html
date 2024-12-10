@@ -3,6 +3,7 @@
     <head>
         <title>Channel - Mastermind</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./projects/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -34,6 +35,23 @@
             </div>
         </div>
         
+        <div class="about">
+            <h1>About Me</h1>
+            <!-- <h3>My Education</h3>
+            <p>
+                For the past <b>7 years</b>, I have been self-teaching and developing projects in cybersecurity and hacking.<br>
+                I started with learning basic computer command structures and understanding the principles of malware development and analysis.<br>
+                <br>
+                By <b>2020</b>, I began focusing on <b>creating and analyzing spyware and Remote Access Trojans (RATs)</b>, which deepened my understanding of malware functionality and system vulnerabilities.<br>
+                <br>
+                Since <b>2022</b>, I have specialized in <b>developing network surveillance tools utilizing ARP table manipulation techniques</b> for in-network monitoring.<br>
+                My projects also include diagnostic programs for analyzing and securing computer systems.<br>
+                My work has involved hands-on experience with tools and techniques such as <b>ARP spoofing, packet interception, and malware behavior analysis.</b><br>
+                <br>
+                Through these projects, <b>I have built a strong foundation in programming languages (Python, C#, C++)</b> and a deep <b>understanding of network protocols and system internals.</b><br>
+                Moving forward, I aim to further expand my expertise by developing advanced penetration testing tools and exploring various other areas of cybersecurity research.<br>
+            </p> -->
+        </div>
 
         <div class="skills">
             <div class="skill" style="width: 50%;">
@@ -45,7 +63,7 @@
         </div>
 
         <div class="project-frame" id="Projects">
-            <h1>Mastermind's Projects</h1>
+            <h1>Mastermind's Currently Working Projects</h1>
             <table class="projects">
                 <caption>Project Information Table</caption>
                 <br>
@@ -64,155 +82,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="project-row" onclick="toggleDetails('details-1')">
-                        <td>Elite</td>
-                        <td>2024-07/22</td>
-                        <td>1.3.2</td>
-                        <td>Network MITM Attack Tool</td>
-                        <td>C#</td>
-                        <td>No</td>
-                        <td>Intermediate</td>
-                        <td>GUI</td>
-                        <td>General Hacking Tool</td>
-                    </tr>
-                    <tr id="details-1" class="details">
-                        <td colspan="8">
-                            <div class="project-info">
-                                <img src="./projects/Elite/logo.png" alt="Project Image">
-                                <div>
-                                    <div class="project-name">Elite</div>
-                                    <div class="project-version">Latest Version: 1.3.2</div>
-                                    <div class="project-date">2024-07/22</div>
-                                </div>
-                            </div>
-                            <div class="project-details">
-                                <h3>Project Overview</h3>
-                                <p>
-                                    Elite project is a network MITM (Man-In-The-Middle) attack tool designed for local network penetration testing.
-                                    It allows users to intercept and manipulate network traffics between the router and the victims to test vulnerabilities.
-                                </p>
-                                <h3>Programming Language</h3>
-                                <span class="badge">badge=CSharp</span>
-                                <h3>Features</h3>
-                                <ul>
-                                    <li>Network Clients Scan</li>
-                                    <li>Real-time Packet Relay</li>
-                                    <li>ARP Table Manipulation (ARP Spoofing)</li>
-                                    <li>DNS Packet Interception & Analysis</li>
-                                    <li>HTTP Packet Interception & Analysis</li>
-                                </ul>
-                                <div class="screenshots">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 1">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 2">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 3">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="project-row" onclick="toggleDetails('details-2')">
-                        <td>Elite Console</td>
-                        <td>2024-11/10</td>
-                        <td>6.2.3</td>
-                        <td>Network MITM Attack Tool</td>
-                        <td>C#</td>
-                        <td>No</td>
-                        <td>Advanced</td>
-                        <td>CLI</td>
-                        <td>General Hacking Tool</td>
-                    </tr>
-                    <tr id="details-2" class="details">
-                        <td colspan="8">
-                            <div class="project-info">
-                                <img src="./projects/Elite Console//logo.png" alt="Project Image">
-                                <div>
-                                    <div class="project-name">Elite Console</div>
-                                    <div class="project-version">Latest Version: 6.2.3</div>
-                                    <div class="project-date">2024-11/10</div>
-                                </div>
-                            </div>
-                            <div class="project-details">
-                                <h3>Project Overview</h3>
-                                <p>
-                                    Elite Console project is an enhanced and high-performance MITM (Man-In-The-Middle) attack tool, designed for advanced capabilities for network penetration testing.
-                                    It has improved thread management and handling which allows faster packet relay speeds and enables more various attacks on local networks.
-                                    This tool has a powerful packet intercept system that allows users to test simple or complex penetration attacks with just one tool.
-                                </p>
-                                <h3>Programming Language</h3>
-                                <span class="badge">badge=CSharp</span>
-                                <h3>Features</h3>
-                                <ul>
-                                    <li>Network Clients Scan</li>
-                                    <li><b>Real-time Packet Relay (Improved Speed)</b></li>
-                                    <li>ARP Table Manipulation (ARP Spoofing)</li>
-                                    <li><del>DNS Packet Interception & Analysis</del></li>
-                                    <li><del>HTTP Packet Interception & Analysis</del></li>
-                                    <li><b>Destination Device Internet Force Disconnection</b></li>
-                                    <li><b>Full Network Force Jamming</b></li>
-                                    <li><b>TCP Packet Utilization (Port Scanning, Cookie Capture, POST Data Capture)</b></li>
-                                    <li><b>ICMP Packet Utilization (Ping, Traceroute, Scan)</b></li>
-                                    <li><b>Packet Capture & Save</b></li>
-                                </ul>
-                                <div class="screenshots">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 1">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 2">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 3">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="project-row" onclick="toggleDetails('details-3')">
-                        <td>Elite++</td>
-                        <td>2024-08/16</td>
-                        <td>2.0.0</td>
-                        <td>Network MITM Attack Tool</td>
-                        <td>C#</td>
-                        <td>No</td>
-                        <td>Excellent</td>
-                        <td>GUI</td>
-                        <td>General Hacking Tool</td>
-                    </tr>
-                    <tr id="details-3" class="details">
-                        <td colspan="8">
-                            <div class="project-info">
-                                <img src="./projects/Elite++/logo.png" alt="Project Image">
-                                <div>
-                                    <div class="project-name">Elite++</div>
-                                    <div class="project-version">Latest Version: 2.0.0</div>
-                                    <div class="project-date">2024-08/16</div>
-                                </div>
-                            </div>
-                            <div class="project-details">
-                                <h3>Project Overview</h3>
-                                <p>
-                                    Elite++ project integrates the Elite Project with the Elite Console, which combines the powerful and clear UI of the Elite Project with the power of the Elite Console project.
-                                </p>
-                                <h3>Programming Language</h3>
-                                <span class="badge">badge=CSharp</span>
-                                <h3>Features</h3>
-                                <ul>
-                                    <li>Network Clients Scan</li>
-                                    <li>Real-time Packet Relay</li>
-                                    <li>ARP Table Manipulation (ARP Spoofing)</li>
-                                    <li>DNS Packet Interception & Analysis</li>
-                                    <li>HTTP Packet Interception & Analysis</li>
-                                    <li><del>Destination Device Internet Force Disconnection</del></li>
-                                    <li>Full Network Force Jamming</li>
-                                    <li>TCP Packet Utilization (Port Scanning, Cookie Capture, POST Data Capture)</li>
-                                    <li><del>ICMP Packet Utilization (Ping, Traceroute, Scan)</del></li>
-                                    <li><del>Packet Capture & Save</del></li>
-                                    <li><b>Multiple Client Management</b></li>
-                                    <li><b>Wireshark Style UI</b></li>
-                                    <li><b>Raw Packet Data Viewer</b></li>
-                                    <li><b>Network Interface Information Viewer</b></li>
-                                </ul>
-                                <div class="screenshots">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 1">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 2">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 3">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
                     <tr class="project-row" onclick="toggleDetails('details-4')">
                         <td>WatchCat</td>
                         <td>2024-04/14</td>
@@ -254,52 +123,6 @@
                                     <li>ARP Packet Logger</li>
                                     <li>MDNS Packet Logger</li>
                                     <li>Client Viewer</li>
-                                </ul>
-                                <div class="screenshots">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 1">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 2">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 3">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="project-row" onclick="toggleDetails('details-5')">
-                        <td>GOU</td>
-                        <td>2024-10/09</td>
-                        <td>1.0.0</td>
-                        <td>General OSINT Tool</td>
-                        <td>C#, Python</td>
-                        <td>No</td>
-                        <td>Basic</td>
-                        <td>CLI</td>
-                        <td>General Recon Tool</td>
-                    </tr>
-                    <tr id="details-5" class="details">
-                        <td colspan="8">
-                            <div class="project-info">
-                                <img src="./projects/GOU/logo.png" alt="Project Image">
-                                <div>
-                                    <div class="project-name">GOU</div>
-                                    <div class="project-version">Latest Version: 1.0.0</div>
-                                    <div class="project-date">2024-10/09</div>
-                                </div>
-                            </div>
-                            <div class="project-details">
-                                <h3>Project Overview</h3>
-                                <p>
-                                    The GOU or Global OSINT Utility project is a recon tool that uses YouTube and Google to perform basic OSINT.
-                                </p>
-                                <h3>Programming Language</h3>
-                                <span class="badge">badge=CSharp</span>
-                                <span class="badge">badge=Python</span>
-                                <h3>Features</h3>
-                                <ul>
-                                    <li>Youtube Profile Picture Parser</li>
-                                    <li>Youtube Banner Pictire Parser</li>
-                                    <li>Youtube Username Search</li>
-                                    <li>Image EXIF Data Extracter</li>
-                                    <li>Image Downloader</li>
-                                    <li>Automated Google Lens Search & Parser</li>
                                 </ul>
                                 <div class="screenshots">
                                     <img src="https://via.placeholder.com/150x100" alt="Screenshot 1">
@@ -354,73 +177,6 @@
                                     <img src="https://via.placeholder.com/150x100" alt="Screenshot 2">
                                     <img src="https://via.placeholder.com/150x100" alt="Screenshot 3">
                                 </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="project-row" onclick="toggleDetails('details-7')">
-                        <td>BlackTech</td>
-                        <td>2024-11/08</td>
-                        <td>4.1.0</td>
-                        <td>Red Team Malware</td>
-                        <td>C++, C#, Python</td>
-                        <td>No</td>
-                        <td>Excellent</td>
-                        <td>CLI & GUI</td>
-                        <td>Malware</td>
-                    </tr>
-                    <tr id="details-7" class="details">
-                        <td colspan="8">
-                            <div class="project-info">
-                                <img src="./projects/BlackTech/logo.png" alt="Project Image">
-                                <div>
-                                    <div class="project-name">BlackTech</div>
-                                    <div class="project-version">Latest Version: 4.1.0</div>
-                                    <div class="project-date">2024-11/08</div>
-                                </div>
-                            </div>
-                            <div class="project-details">
-                                <h3>Project Overview</h3>
-                                <p>
-                                    BlackTech project is a DLL (Dynamic Link Library) malware developed in C++, C#, and Python using AI (ChatGPT, Copilot, etc).
-                                    It collects most of the information available to the system and extracts the Chrome browser's password list as a key feature and sends it to an external SMTP (Gmail) server.
-                                </p>
-                                <b>As the project is registered on VirusTotal, its patterns and hashes may be detected by most antivirus software in a short period of time.</b>
-                                <br>
-                                <ul>
-                                    <li><a href="https://www.virustotal.com/gui/file/20aad5691f1c0ee7ff30115570978574c167f5c878965d0bd135a0a8a758a41f/detection" target="_blank">https://www.virustotal.com/gui/file/20aad5691f1c0ee7ff30115570978574c167f5c878965d0bd135a0a8a758a41f/detection</a></li>
-                                    <li><a href="https://www.virustotal.com/gui/file/66de3825fcf696624ec0852f08b6e30df89f2c5e42a51cd3d577ad8111ba3d27/detection" target="_blank">https://www.virustotal.com/gui/file/66de3825fcf696624ec0852f08b6e30df89f2c5e42a51cd3d577ad8111ba3d27/detection</a></li>
-                                    <li><a href="https://www.virustotal.com/gui/file/66de3825fcf696624ec0852f08b6e30df89f2c5e42a51cd3d577ad8111ba3d27/detection" target="_blank">https://www.virustotal.com/gui/file/66de3825fcf696624ec0852f08b6e30df89f2c5e42a51cd3d577ad8111ba3d27/detection</a></li>
-                                    <li><a href="https://www.virustotal.com/gui/file/5cba86bcbc3ccca98ad079d8522cebe717f389d3a3945f383bcfdfbae741f88d/detection" target="_blank">https://www.virustotal.com/gui/file/5cba86bcbc3ccca98ad079d8522cebe717f389d3a3945f383bcfdfbae741f88d/detection</a></li>
-                                </ul>
-                                <a>Some versions are for testing purposes. Some powerful anti-virus products have fended off new attacks.</a>
-                                <br>
-                                <h3>Programming Language</h3>
-                                <span class="badge">badge=CPP</span>
-                                <span class="badge">badge=CSharp</span>
-                                <span class="badge">badge=Python</span>
-                                <h3>Features</h3>
-                                <ul>
-                                    <li>Automatic Report Generation (HTML Table Format)</li>
-                                    <li>Anti-virus, IDS, and IPS Bypass (SMTP Reports Excluded)</li>
-                                    <li>PowerShell & CMD Script Execution and Results Extractor</li>
-                                    <li>Creation and Collection of Windows System Reports</li>
-                                    <li>Collection of Network Configuration Information</li>
-                                    <li>Collection of Internal/External Windows User Information</li>
-                                    <li>Collection of Current User Session Information</li>
-                                    <li>Collection of Entire Process Execution Information</li>
-                                    <li>Collection of Entire Network Connection Information</li>
-                                    <li>Collection of Entire Installed Programs Information</li>
-                                    <li>Collection of Entire Registered Services Information</li>
-                                    <li>Collection of Entire Registered Drivers Information</li>
-                                    <li>Collection of Chrome Browser User Account Information (Website, Username, Password)</li>
-                                </ul>
-                                <div class="screenshots">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 1">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 2">
-                                    <img src="https://via.placeholder.com/150x100" alt="Screenshot 3">
-                                </div>
-                                <br>
-                                <b>This project has been temporarily closed.</b>
                             </div>
                         </td>
                     </tr>
