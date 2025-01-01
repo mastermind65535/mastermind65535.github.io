@@ -122,3 +122,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
+
+@media only screen and (max-width: 992px) {
+    body .project-info img { width: 250px; }
+    body .project-info .project-name { font-size: 100px; }
+    body .project-info .project-version { font-size: 60px; }
+    body .project-info .project-date { font-size: 40px; }
+    body .project-details .screenshots { display: block; }
+    body .project-details .screenshots img { width: 100%; height: auto; }
+}

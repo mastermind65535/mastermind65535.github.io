@@ -86,95 +86,12 @@ function ShowLevel() {
     });
 }
 
-function LoadChart() {
-    const ctx = document.getElementById('skillChart').getContext('2d');
-    const skillChart = new Chart(ctx, {
-        type: 'radar',  // Radar chart type
-        data: {
-            labels: [
-                'Network Hacking',
-                'Malware Development & Analysis',
-                'OSINT - Open Source Intelligence',
-                'Security Tool Development',
-                'System Hacking & Exploit Development',
-                'Intrusion Detection & Defense',
-                'Practical Experience & Community Involvement'
-            ], // Labels for each axis in the radar chart
-            datasets: [{
-                label: 'Skills',  // Dataset label
-                data: [90, 85, 70, 95, 65, 75, 50], // Data points
-                fill: true,
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgb(255, 99, 132)',
-                pointBackgroundColor: 'rgb(255, 99, 132)',
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgb(255, 99, 132)'
-            }]
-        },
-        options: {
-            responsive: true,  // Chart responsiveness
-            scales: {
-                y: {
-                    beginAtZero: true  // Start the y-axis at zero
-                },
-                r: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
-    const ctx2 = document.getElementById('growthChart').getContext('2d');
-    const growthChart = new Chart(ctx2, {
-        type: 'line',
-        data: {
-            labels: ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
-            datasets: [{
-                label: 'Cumulative Projects',
-                data: [0, 0, 0, 0, 0, 0, 1, 1+37, 37+41],
-                backgroundColor: 'rgba(54, 162, 235, 0.5)',
-                borderColor: 'rgb(54, 162, 235)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'top',
-                },
-                tooltip: {
-                    callbacks: {
-                        label: function(tooltipItem) {
-                            return `Projects: ${tooltipItem.raw}`;
-                        }
-                    }
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'Number of Projects'
-                    }
-                },
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Year'
-                    }
-                }
-            }
-        }
-    });
+function makeGoBack() {
+    
 }
 
 function Init() {
     addBadgeImages();
-    ShowPublic();
-    ShowLevel();
-    LoadChart();
+    // ShowPublic();
+    // ShowLevel();
 }
