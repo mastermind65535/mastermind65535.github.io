@@ -110,6 +110,10 @@ body {
     padding: 20px;
 }
 
+.tabulator-row {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 992px) {
     :root { --iconSize: 120px; }
 

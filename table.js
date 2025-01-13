@@ -5,7 +5,7 @@ const __PROJECTS = [
         name: "SharpCry",
         version: "1.0.0",
         date: "2025-01-12",
-        rating: 2,
+        rating: 3,
         description: "C# Intelligent Ransomware PoC",
         language: "C#",
         type: "Malware",
@@ -22,14 +22,104 @@ const __PROJECTS = [
         url: "https://github.com/mastermind65535/APT65535"
     },
     {
-        name: "ByteCracker",
-        version: "2.5.0",
-        date: "2025-01-10",
+        name: "BloodTear-old",
+        version: "1.0.0",
+        date: "2025-01-08",
+        rating: 3,
+        description: "Advanced Debugger + Disassembler + Decompiler",
+        language: "Python",
+        type: "Decompiler",
+        url: "https://github.com/mastermind65535/BloodTear-old"
+    },
+    {
+        name: "HDE-old",
+        version: "5.8.3",
+        date: "2025-01-06",
         rating: 1,
         description: "BloodTear Legacy Project",
         language: "C++",
+        type: "Decompiler",
+        url: "https://github.com/mastermind65535/HDE-old"
+    },
+    {
+        name: "ByteCracker-old",
+        version: "2.5.0",
+        date: "2025-01-10",
+        rating: 3,
+        description: "BloodTear Legacy Project",
+        language: "C++",
+        type: "Disassembler",
+        url: "https://github.com/mastermind65535/ByteCracker-old"
+    },
+    {
+        name: "Elite",
+        version: "1.3.2",
+        date: "2024-07-22",
+        rating: 3,
+        description: "Network MITM Attack Utility w/ Graphic User Interface (GUI)",
+        language: "C#",
+        type: "General Hacking Utility",
+        url: "N/A"
+    },
+    {
+        name: "Elite Console",
+        version: "6.2.3",
+        date: "2024-11-10",
+        rating: 5,
+        description: "Network MITM Attack Utility w/ Command Line Interface (CLI)",
+        language: "C#",
+        type: "General Hacking Utility",
+        url: "N/A"
+    },
+    {
+        name: "Elite++",
+        version: "2.0.0",
+        date: "2024-08-16",
+        rating: 4,
+        description: "Network MITM Attack Utility w/ Graphic User Interface (GUI)",
+        language: "C#",
+        type: "General Hacking Utility",
+        url: "N/A"
+    },
+    {
+        name: "WatchCat",
+        version: "6.0.0",
+        date: "2024-04/14",
+        rating: 5,
+        description: "Network Device Discovery Utility",
+        language: "C# | Python",
+        type: "General Recon Utility",
+        url: "N/A"
+    },
+    {
+        name: "Alpha",
+        version: "1.5.0",
+        date: "2024-05-26",
+        rating: 4,
+        description: "Reverse Shell Backdoor",
+        language: "Python",
         type: "Malware",
-        url: "https://github.com/mastermind65535/APT65535"
+        url: "N/A"
+    },
+    {
+        name: "BlackTech",
+        version: "4.1.0",
+        date: "2024-11-08",
+        rating: 5,
+        description: "Chrome Password Cracker",
+        language: "C++ | C# | Python",
+        type: "Malware",
+        url: "N/A"
+    },
+    {
+        name: "Fake MS Updater",
+        version: "1.0.0",
+        date: "2025-01-12",
+        rating: 5,
+        description: "Fake Microsoft Windows Emergency Updater",
+        language: "C#",
+        type: "Trojan",
+        url: "https://github.com/mastermind65535/Fake-MS-Updater"
     }
 ];
 
@@ -122,7 +212,9 @@ var rowPopupFormatter = function(e, row, onRendered){
     contents += "<li><strong>Description:</strong> " + data.description + "</li>";
     contents += "<li><strong>Language:</strong> " + data.language + "</li>";
     contents += "<li><strong>Type:</strong> " + data.type + "</li>";
-    contents += "<li><strong>URL:</strong> <a href='" + data.url + "' target='_blank'>" + data.url + "</a></li>";
+    var LINK = "<a href='" + data.url + "' target='_blank'>" + data.url + "</a>";
+    if (data.url == "N/A") { LINK = "N/A"; }
+    contents += "<li><strong>URL:</strong> " + LINK + "</li>";
     contents += "</ul>";
 
     container.style.color = "black";
@@ -137,7 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
     var table = new Tabulator("#projects-frame", {
         height: "600px",
         layout: "fitColumns",
-        responsiveLayout:"collapse",
         rowClickPopup: rowPopupFormatter,
         columns: [
             {
