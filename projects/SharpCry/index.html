@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SharpCry Project</title>
+        <link rel="stylesheet" href="../style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+        <script src="../../script.js"></script>
+        <script>
+            window.onload = addBadgeImages;
+        </script>
+    </head>
+    <body>
+        <h1 id="sharpcry">SharpCry</h1>
+        <blockquote>
+        <p>C# Intelligent Ransomware PoC</p>
+        </blockquote>
+        <h2 id="screenshots">Screenshots</h2>
+        <p><img src="screenshot.png">
+        <img src="screenshot2.png">
+        <img src="screenshot3.png">
+        <img src="screenshot4.png"></p>
+        <h2 id="videos">Videos</h2>
+        <h1 id="disclaimer">Disclaimer</h1>
+        <blockquote>
+        <p>This software is intended <strong><em>exclusively for educational purposes and ethical cybersecurity research</em></strong>. It is designed to help users understand potential vulnerabilities in systems so they can improve their security.</p>
+        <p>By using this software, you agree to use it in compliance with all applicable laws and regulations. Unauthorized use, distribution, or deployment of this software against any system without the explicit permission of the system owner is strictly prohibited and may result in criminal and civil penalties.</p>
+        <p>The creator(s) of this software assume no liability and are not responsible for any misuse or damages arising from the use of this software. Always obtain proper authorization before testing or analyzing systems using this software.</p>
+        </blockquote>
+        <h1 id="warning">Warning</h1>
+        <blockquote>
+        <p>Be sure to read the license before using the project.</p>
+        </blockquote>
+        <h1 id="purposes">Purposes</h1>
+        <blockquote>
+        <p>This project is a <strong>Proof of Concept (PoC) malware designed to evaluate <ins>the ability of ransomware detection of anti-virus software</ins></strong> and assess their effectiveness in responding to and minimizing the impact of already executed malicious code.
+        <strong><del>(No malicious actions are included in the source code.)</del></strong></p>
+        </blockquote>
+        <h1 id="usage">Usage</h1>
+        <blockquote>
+        <h2 id="execution">Execution</h2>
+        <p><strong>You must run server.py on the same server or it will not be activated.</strong><br>
+        SharpCry.exe --debug &amp;:: DEBUG MODE: PRINTS ALL INFORMATION<br>
+        SharpCry.exe --force &amp;:: ACTION MODE: ENCRYPT ALL FILES<br></p>
+        <h2 id="configuration">Configuration</h2>
+        <pre><code class="lang-CSharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-built_in">string</span> __KILL_SWITCH = <span class="hljs-string">"KILL_SWITCH_SERVER"</span>; <span class="hljs-comment">// i.e. http://localhost:8080/</span>
+        </code></pre>
+        <p><strong>The kill switch will be automatically activate if the program cannot &quot;access&quot; to the link. This means if your kill switch server is NOT active, it will shutdown.</strong></p>
+        <h2 id="manual-compilation">Manual Compilation</h2>
+        <ol>
+        <li>Load the <strong>SharpCry.sln</strong> in <a href="https://visualstudio.microsoft.com/vs/">Visual Studio 2022</a>.<br></li>
+        <li><strong>Publish</strong> the solution.<br></li>
+        <li>Go to <strong>bin/Release/net8.0/win-x64/publish/win-x64/</strong></li>
+        <li>Use the <strong>SharpCry.exe</strong>.<br><h2 id="prebuilt-executable">Prebuilt Executable</h2>
+        <strong>!WARNING! Prebuilt executable does not support remote server. This mean the program ONLY works on your device.</strong><br></li>
+        <li>Go to project directory and find <strong>bin/Release/net8.0/win-x64/publish/win-x64/</strong>.<br></li>
+        <li>Use the <strong>SharpCry.exe</strong>.<br></li>
+        </ol>
+        </blockquote>
+    </body>
+</html>
