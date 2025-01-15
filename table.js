@@ -115,11 +115,31 @@ const __PROJECTS = [
         name: "Fake MS Updater",
         version: "1.0.0",
         date: "2025-01-12",
-        rating: 5,
+        rating: 3,
         description: "Fake Microsoft Windows Emergency Updater",
         language: "C#",
         type: "Trojan",
         url: "https://github.com/mastermind65535/Fake-MS-Updater"
+    },
+    {
+        name: "HYDRA",
+        version: "2.0.0",
+        date: "2023-06-17",
+        rating: 4,
+        description: "Advanced Process & Network Connection Management Utility",
+        language: "Python",
+        type: "Network Utility",
+        url: "https://github.com/mastermind65535/HYDRA"
+    },
+    {
+        name: "SocketProxy",
+        version: "2.0.0",
+        date: "2023-08-28",
+        rating: 3,
+        description: "HTTP Proxy Server",
+        language: "Python",
+        type: "Network Utility",
+        url: "https://github.com/mastermind65535/SocketProxy"
     }
 ];
 
